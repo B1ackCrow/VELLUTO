@@ -1,11 +1,15 @@
 :root {
+    /* Fonts */
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Manrope", sans-serif;
+
     /* Primary */
-    --color-primary: #312f2c;
-    --color-primary-hover: #484540;
+    --color-primary: #EDE8E0;
+    --color-primary-hover: #959185;
     --color-on-primary: #ffffff;
 
     /* Secondary */
-    --color-secondary: #e5e5e5;
+    --color-secondary: #EDE8E0;
     --color-secondary-hover: #d5d5d5;
     --color-on-secondary: #212121;
 
@@ -18,7 +22,7 @@
     --color-surface-hover: #f0f0f0;
 
     /* Buttons */
-    --button-radius: 8px;
+    --button-radius: 2px;
 
     /* Input */
     --input-radius: 8px;
