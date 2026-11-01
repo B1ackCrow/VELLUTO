@@ -29,17 +29,17 @@ const categories = computed(() =>
           with a modern expression.
         </p>
 
-        <RouterLink class="menu-link" to="/menu">
+        <a class="menu-link" href="#" @click.prevent>
           VIEW FULL MENU
           <span aria-hidden="true">⟶</span>
-        </RouterLink>
+        </a>
       </div>
 
       <div class="menu-categories">
-        <RouterLink
+        <a
             v-for="category in categories"
             :key="category.id"
-            :to="{ path: '/menu', query: { category: category.id } }"
+            href="#" @click.prevent
             class="menu-card"
         >
           <div class="menu-card__image">
@@ -54,7 +54,7 @@ const categories = computed(() =>
             <h3>{{ category.title }}</h3>
             <span class="menu-line" />
           </div>
-        </RouterLink>
+        </a>
       </div>
     </div>
   </section>
@@ -65,13 +65,13 @@ const categories = computed(() =>
   display: flex;
   align-items: center;
   min-height: 80svh;
-  padding: 120px 7%;
+  padding: var(--section-space) var(--page-gutter);
   background: radial-gradient(
           ellipse at 65% 50%,
-          #282017 0%,
-          #100e0b 65%
+          var(--color-dark-glow) 0%,
+          var(--color-dark) 65%
   );
-  color: #ede8e0;
+  color: var(--color-light);
 }
 
 .menu-container {
@@ -80,7 +80,7 @@ const categories = computed(() =>
   align-items: center;
   gap: 56px;
   width: 100%;
-  max-width: 1600px;
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -91,7 +91,7 @@ const categories = computed(() =>
   margin-bottom: 32px;
   font-size: 12px;
   letter-spacing: 0.2em;
-  color: #b5ada1;
+  color: var(--color-muted-dark);
 }
 
 .menu-line {
@@ -115,7 +115,7 @@ const categories = computed(() =>
     margin: 32px 0 40px;
     font-size: 16px;
     line-height: 1.8;
-    color: #b5ada1;
+    color: var(--color-muted-dark);
   }
 }
 
@@ -125,7 +125,7 @@ const categories = computed(() =>
   justify-content: space-between;
   gap: 32px;
   padding: 19px 28px;
-  border: 1px solid #8d8375;
+  border: 1px solid var(--color-border-dark);
   color: inherit;
   text-decoration: none;
   font-size: 11px;
@@ -133,7 +133,7 @@ const categories = computed(() =>
   transition: background 0.2s;
 
   &:hover {
-    background: rgb(237 232 224 / 8%);
+    background: color-mix(in srgb, var(--color-light) 8%, transparent);
   }
 
   span {
@@ -150,7 +150,7 @@ const categories = computed(() =>
 
 .menu-card {
   min-width: 0;
-  border: 1px solid rgb(237 232 224 / 12%);
+  border: 1px solid color-mix(in srgb, var(--color-light) 12%, transparent);
   color: inherit;
   text-decoration: none;
 
@@ -189,7 +189,7 @@ const categories = computed(() =>
 .menu-link,
 .menu-card {
   &:focus-visible {
-    outline: 2px solid #ede8e0;
+    outline: 2px solid var(--color-light);
     outline-offset: 5px;
   }
 }

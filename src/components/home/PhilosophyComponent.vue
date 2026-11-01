@@ -25,6 +25,7 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
           We combine traditional flavors with a modern approach, creating dishes
           that tell a story of heritage, passion, and craftsmanship.
         </p>
+        <a href="#" @click.prevent class="text-link philosophy-story">OUR STORY <span aria-hidden="true">⟶</span></a>
       </div>
 
       <!-- Images -->
@@ -33,12 +34,14 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
             :src="mainImage"
             alt="Velluto fine dining"
             class="main-image"
+            loading="lazy"
         />
 
         <img
             :src="handImage"
             alt="Chef preparing a dish"
             class="hand-image"
+            loading="lazy"
         />
       </div>
 
@@ -54,9 +57,9 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
 <style scoped lang="scss">
 .philosophy-component {
   width: 100%;
-  padding: 120px 7%;
-  background: #f5f1ea;
-  color: #24231f;
+  padding: var(--section-space) var(--page-gutter);
+  background: var(--color-paper);
+  color: var(--color-text);
 }
 
 .philosophy-container {
@@ -65,9 +68,11 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
   align-items: center;
   gap: 60px;
 
-  max-width: 1600px;
+  max-width: var(--content-width);
   margin: 0 auto;
 }
+
+.philosophy-story { margin-top: 28px; }
 
 // TEXT
 
@@ -84,7 +89,7 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
 
   margin-bottom: 32px;
 
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -93,14 +98,14 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
   .label-line {
     width: 40px;
     height: 1px;
-    background: #aaa49a;
+    background: var(--color-border);
   }
 }
 
 .philosophy-title {
   margin: 0 0 32px;
 
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-size: clamp(48px, 4.5vw, 80px);
   font-weight: 400;
   line-height: 0.95;
@@ -111,11 +116,11 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
   max-width: 420px;
   margin: 0;
 
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.9;
-  color: #777168;
+  color: var(--color-muted);
 }
 
 // IMAGES
@@ -143,7 +148,7 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
 
   object-fit: cover;
 
-  border: 2px solid #f5f1ea;
+  border: 2px solid var(--color-paper);
 }
 
 // QUOTE
@@ -152,14 +157,14 @@ import handImage from '@/assets/images/philosophy/hand-image.png'
   align-self: end;
   padding-bottom: 40px;
 
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-size: clamp(24px, 2.2vw, 38px);
   font-style: italic;
   opacity: 0.7;
   font-weight: 300;
   line-height: 1.15;
   text-align: center;
-  color: #74685c;
+  color: var(--color-muted);
 }
 
 // TABLET

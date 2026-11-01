@@ -179,7 +179,9 @@ function handleClick(event) {
 
   font-family: inherit;
   font-weight: 500;
-  line-height: 1;
+  letter-spacing: 0.13em;
+  line-height: 1.3;
+  white-space: nowrap;
 
   cursor: pointer;
   user-select: none;
@@ -218,15 +220,15 @@ function handleClick(event) {
   }
 
   &--medium {
-    min-height: 40px;
+    min-height: 48px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 11px;
   }
 
   &--large {
     min-height: 48px;
     padding: 12px 26px;
-    font-size: 18px;
+    font-size: 12px;
   }
 
   // Variants
@@ -326,6 +328,8 @@ function handleClick(event) {
 
   &__content {
     display: inline-flex;
+    gap: 0;
+    min-height: 20px;
     align-items: center;
     justify-content: center;
   }

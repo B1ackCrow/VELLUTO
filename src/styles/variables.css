@@ -6,16 +6,29 @@
     /* Primary */
     --color-primary: #EDE8E0;
     --color-primary-hover: #959185;
-    --color-on-primary: #ffffff;
+    --color-on-primary: #212121;
 
     /* Secondary */
-    --color-secondary: #EDE8E0;
-    --color-secondary-hover: #d5d5d5;
+    --color-secondary: var(--color-primary);
+    --color-secondary-hover: #d9d1c5;
     --color-on-secondary: #212121;
 
     /* Danger */
     --color-danger: #dc3545;
     --color-danger-hover: #bb2d3b;
+
+    /* Page theme — change these to recolor the entire home page */
+    --color-light: var(--color-primary);
+    --color-paper: #f5f1ea;
+    --color-dark: #100e0b;
+    --color-dark-glow: #282017;
+    --color-muted: #777168;
+    --color-muted-dark: #b5ada1;
+    --color-border: #aaa49a;
+    --color-border-dark: #756d60;
+    --page-gutter: 7%;
+    --section-space: 110px;
+    --content-width: 1600px;
 
     /* General */
     --color-text: #212121;
